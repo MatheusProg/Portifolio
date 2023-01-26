@@ -11,6 +11,7 @@
     box-sizing: border-box;
     font-family: Merriweather Sans;
     text-decoration: none;
+    list-style-type: none;
 }
 
 .border {
@@ -22,7 +23,7 @@
 body {
     background-color: var(--body-bg-color);
     overflow-x: hidden;
-    width: 100%;
+    max-width: 1400px;
 }
 
 .container {
@@ -30,13 +31,16 @@ body {
     height: auto;
     display: flex;
     margin: 35px 35px 0 35px;
+    flex-direction: row;
+    gap: 30px;
 }
 
 /* Cards Laterais */
 .cardLateral {
-    width: 22%;
+    width: 20%;
     display: flex;
     flex-direction: column;
+    gap: 30px;
 }
 /* Profile */
 .cardLateral .profile {
@@ -77,7 +81,6 @@ body {
     display: flex;
     width: 100%;
     height: 260px;
-    margin-top: 30px;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -102,7 +105,6 @@ body {
     justify-items: center;
     width: 100%;
     height: 160px;
-    margin-top: 30px;
 }
 .tecnologies h3 {
     place-self: stretch;
@@ -112,17 +114,17 @@ body {
     font-size: 15px;
 }
 
-.tecnologies .tecs {
+.tecnologies ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     justify-content: center;
-    width: 85%;
+    gap: 8px;
     height: 90px;
 }
 
-.tecs span {
+.tecnologies ul li {
     display: flex;
     width: 76px;
     height: 24px;
@@ -136,11 +138,13 @@ body {
 
 /* ----- My Projects area ----- */
 main {
+    display: flex;
+    flex-direction: column;
     width: 70%;
-    margin-left: 35px;
+    gap: 30px;
 }
 
-.projects {
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -148,16 +152,69 @@ main {
     align-items: center;
     color: var(--text-color);
 }
-.projects h3 {
+.header h3 {
     font-weight: 700;
     font-size: 20px;
 }
-.projects a {
+.header a {
     font-size: 12px;
     font-weight: 400;
     text-align: center;
     color: var(--text-color);
 }
+
+.projects {
+    display: flex;
+    width: 100%;
+    height: 160px;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gitCard {
+    display: flex;
+    width: 300px;
+    height: 150px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 10px;
+    flex-shrink: 0;
+}
+.gitCard h4 {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.gitCard p {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.gitCard ul {
+    display: grid;
+    grid-template-columns: 20% 20px 1fr;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+
+.gitCard li {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.gitCard li:nth-child(3) {
+    justify-self: end;
+}
+
 
 
 
