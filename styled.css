@@ -26,11 +26,11 @@ body {
     max-width: 1400px;
 }
 
-.container {
+main {
     width: 100%;
     height: auto;
     display: flex;
-    margin: 35px 35px 0 35px;
+    margin: 35px 35px 10px 35px;
     flex-direction: row;
     gap: 30px;
 }
@@ -137,7 +137,7 @@ body {
 }
 
 /* ----- My Projects area ----- */
-main {
+.container {
     display: flex;
     flex-direction: column;
     width: 70%;
