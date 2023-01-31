@@ -8,6 +8,7 @@ function getApiGithub() {
 
     let data = await res.json()
     let card = data.slice(3, 6)
+
     card.map((item) => {
       let gitCard = document.createElement("div")
       gitCard.innerHTML = `
@@ -17,7 +18,10 @@ function getApiGithub() {
         <ul class="dados">
           <li><img src="./img/star.svg" alt="star" />${item.stargazers_count}</li>
           <li><img src="./img/view.svg" alt="view" />${item.watchers_count}</li>
-          <li><img src="./img/Ellipse.svg" alt="Ellipse" />${item.language}</li>
+          <div class="language">
+            <img src="./img/github.svg" alt="" />
+            <span>${item.language}</span>
+          </div>
         </ul>
       </div>
       `
