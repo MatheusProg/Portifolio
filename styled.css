@@ -185,7 +185,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    padding: 15px 10px;
+    padding: 15px;
     flex-shrink: 0;
 }
 .gitCard h4 {
@@ -216,7 +216,13 @@ main {
     align-items: center;
     gap: 5px;
 }
-.gitCard li:nth-child(3) {
+
+.gitCard .language {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.gitCard .language {
     justify-self: end;
 }
 
