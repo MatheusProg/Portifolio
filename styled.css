@@ -3,6 +3,8 @@
     --text-color: #837E9F;
     --bg-cards: #302F3D;
     --bg-techs: #CB92B1;
+
+    font-size: 62.5%;
   }
 
 *{
@@ -14,16 +16,25 @@
     list-style-type: none;
 }
 
-.border {
+.borderShadow {
     background: var(--bg-cards);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
+    font-size: 1.6rem;
 }
 
 body {
     background: var(--body-bg-color);
     overflow-x: hidden;
-    max-width: 1400px;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
 }
 
 header {
@@ -32,43 +43,46 @@ header {
 }
 
 main {
-    width: 100%;
-    height: auto;
     display: flex;
-    margin: 0px 35px 10px 35px;
-    flex-direction: row;
-    gap: 30px;
+    flex-direction: column;
+    width: 70%;
+    gap: 3rem;
+}
+
+footer {
+    width: 100%;
+    height: 3.5rem;
 }
 
 /* Cards Laterais */
-.cardLateral {
+aside {
     width: 20%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 1.5rem;
 }
 /* Profile */
-.cardLateral .profile {
+aside .profile {
     display: flex;
     width: 100%;
-    height: 240px;
+    height: 24rem;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
 }
 .profile .avatar {
-    width: 120px;
-    height: 120px;
+    width: 12rem;
+    height: 12rem;
 
     border-radius: 50%;
     background-color: var(--bg-techs);
     background: url(https://avatars.githubusercontent.com/u/38333767?v=4) no-repeat center;
     overflow: hidden;
     background-size: cover;
-    border: 2px solid #004700;
+    border: 0.2rem solid #015c01;
 }
 .profile .name {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: -25px;
     color: var(--text-color);
@@ -76,47 +90,47 @@ main {
 
 }
 .profile .profisao {
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 300;
     color: var(--text-color);
 }
 
 /* ----- Links ----- */
-.cardLateral .links {
+aside .links {
     display: flex;
     width: 100%;
-    height: 260px;
+    height: 26rem;
     flex-direction: column;
     justify-content: space-evenly;
 }
 .links a {
     display: flex;
     color: var(--text-color);
-    margin-left: 25px;
+    margin-left: 2.5rem;
     font-weight: 300;
-    font-size: 11px;
-    line-height: 16px;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
     align-items: center;
 }
 .links a img {
-    margin-right: 10px;
+    margin-right: 1rem;
 }
 
 /* Tecnologies */
-.cardLateral .tecnologies {
+aside .tecnologies {
     display: grid;
     grid-column: 1fr 1fr;
     align-content: center;
     justify-items: center;
     width: 100%;
-    height: 160px;
+    height: 16rem;
 }
 .tecnologies h3 {
     place-self: stretch;
-    margin: 0 0 15px 15px;
+    margin: 0 0 1.5rem 1.5rem;
     color: var(--text-color);
     font-weight: 700;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .tecnologies ul {
@@ -125,44 +139,38 @@ main {
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     justify-content: center;
-    gap: 8px;
-    height: 90px;
+    gap: 0.8rem;
+    height: 9rem;
 }
 
 .tecnologies ul li {
     display: flex;
-    width: 76px;
-    height: 24px;
+    width: 7.6rem;
+    height: 2.4rem;
     background-color: var(--bg-techs);
-    border-radius: 30px;
+    border-radius: 3rem;
     font-weight: 500;
-    font-size: 10px;
+    font-size: 1rem;
     align-items: center;
     justify-content: center;
 }
 
 /* ----- My Projects area ----- */
-.feedContainer {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    gap: 30px;
-}
 
 .myProject {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 2rem 2rem;
     align-items: center;
     color: var(--text-color);
 }
 .myProject h3 {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 2rem;
 }
 .myProject a {
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
     color: var(--text-color);
@@ -173,39 +181,40 @@ main {
     width: 100%;
     height: auto;
     flex-direction: row;
-    gap: 30px;
+    gap: 3rem;
     justify-content: center;
     align-items: center;
+
 }
 
 .gitCard {
     display: flex;
-    width: 300px;
-    height: 150px;
+    width: 30rem;
+    height: 15rem;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
-    padding: 15px;
+    gap: 1rem;
+    padding: 1.5rem;
     flex-shrink: 0;
 }
 .gitCard h4 {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    font-size: 14px;
+    gap: 0.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--text-color);
 }
 .gitCard p {
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 400;
     color: var(--text-color);
 }
 .gitCard .dados {
     display: grid;
     grid-template-columns: 10% 10% 65%;
-    gap: 20px;
-    font-size: 12px;
+    gap: 2rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: var(--text-color);
 }
@@ -214,39 +223,38 @@ main {
 .gitCard .count {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.5rem;
 }
 
 .gitCard .language {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.5rem;
     justify-self: flex-end;
 }
 .language .html {
     content: '';
-    width: 12px;
-    height: 12px;
+    width: 1.2rem;
+    height: 1.2rem;
     display: block;
     background: #e36e00;
     border-radius: 50%;
-    border: 2px solid #837E9F ;
+    border: 0.2rem solid #837E9F ;
 }
 .language .js {
     content: '';
-    width: 12px;
-    height: 12px;
+    width: 1.2rem;
+    height: 1.2rem;
     display: block;
     background: #fff200;
     border-radius: 50%;
-    border: 2px solid #837E9F ;
+    border: 0.2rem solid #837E9F ;
 }
-.language .colorLang {
-    content: '';
+.language .cor {
     width: 12px;
     height: 12px;
     display: block;
-    background: #e36e00;
+    background: #5b554f;
     border-radius: 50%;
     border: 2px solid #837E9F ;
 }
