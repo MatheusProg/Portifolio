@@ -19,8 +19,7 @@ function getApiGithub() {
           <li><img src="./img/star.svg" alt="star" />${item.stargazers_count}</li>
           <li><img src="./img/view.svg" alt="view" />${item.watchers_count}</li>
           <div class="language">
-            <img src="./img/github.svg" alt="" />
-            <span>${item.language}</span>
+            <span class="lang">${item.language}</span>
           </div>
         </ul>
       </div>
