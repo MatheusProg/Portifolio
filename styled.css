@@ -221,9 +221,21 @@ main {
     display: flex;
     align-items: center;
     gap: 5px;
-}
-.gitCard .language {
     justify-self: end;
+}
+.lang {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.language span::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    background-color: #e36e00;
+    border-radius: 50%;
+    border: 2px solid #837E9F ;
 }
 
 
