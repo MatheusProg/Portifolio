@@ -1,32 +1,56 @@
-const projects = document.querySelector(".projects")
+const url = "https://api.github.com/users/MatheusProg/repos"
 
-function getApiGithub() {
-  fetch("https://api.github.com/users/MatheusProg/repos").then(async (res) => {
-    if (!res.ok) {
-      throw new error(res.status)
-    }
+const projects = document.querySelector("#cardContainer")
 
-    let data = await res.json()
-    let card = data.slice(3, 6)
+async function getApiGithub() {
+  const response = await fetch(url)
 
-    card.map((item) => {
-      let gitCard = document.createElement("div")
-      gitCard.innerHTML = `
-      <div class="gitCard border">
-        <h4><img src="./img/folder.svg" alt="folder" />${item.name}</h4>
-        <p>${item.description}</p>
-        <ul class="dados">
-          <li><img src="./img/star.svg" alt="star" />${item.stargazers_count}</li>
-          <li><img src="./img/view.svg" alt="view" />${item.watchers_count}</li>
+  const data = await response.json()
+  const card = data.slice(3, 6)
+
+  card.map((item) => {
+    const gitCard = document.createElement("div")
+    gitCard.innerHTML = `
+    <div class="gitCard border">
+      <h4><img src="./img/folder.svg" alt="folder" />${item.name}</h4>
+      <p class="pp">${item.description}</p>
+      <div class="dados">
+        <div class="count star">
+          <img src="./img/star.svg" alt="star">
+          <span class="countStar">0</span>
+        </div>
+        <div class="count view">
+          <img src="./img/view.svg" alt="star">
+          <span class="countView">0</span>
+        </div>
           <div class="language">
+            <span class="cor "></span>
             <span class="lang">${item.language}</span>
           </div>
-        </ul>
+        </div>
       </div>
-      `
-      projects.appendChild(gitCard)
-    })
+    </div>
+    `
+
+    projects.appendChild(gitCard)
   })
+  trocarCor()
 }
 
+function trocarCor() {
+  const lang = document.querySelector(".lang").innerHTML
+  var cor = document.querySelector(".cor")
+  console.log(lang)
+  switch (lang) {
+    case "HTML":
+      cor.classList.add("html")
+      break
+    case "JavaScript":
+      cor.classList.add("js")
+      break
+
+    default:
+      break
+  }
+}
 getApiGithub()
