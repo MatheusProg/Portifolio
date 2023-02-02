@@ -10,8 +10,8 @@ async function getApiGithub() {
 
   card.map((item) => {
     const gitCard = document.createElement("div")
+    gitCard.className = "gitCard borderShadow"
     gitCard.innerHTML = `
-    <div class="gitCard border">
       <h4><img src="./img/folder.svg" alt="folder" />${item.name}</h4>
       <p class="pp">${item.description}</p>
       <div class="dados">
@@ -29,23 +29,25 @@ async function getApiGithub() {
           </div>
         </div>
       </div>
-    </div>
     `
 
     projects.appendChild(gitCard)
+    trocarCor()
   })
-  trocarCor()
 }
 
 function trocarCor() {
-  const lang = document.querySelector(".lang").innerHTML
+  var lang = document.querySelector([".lang"])
+  var la = lang.innerText
   var cor = document.querySelector(".cor")
-  console.log(lang)
-  switch (lang) {
+  console.log(la)
+  switch (la) {
     case "HTML":
+      cor.classList.remove("cor")
       cor.classList.add("html")
       break
     case "JavaScript":
+      cor.classList.remove("cor")
       cor.classList.add("js")
       break
 
@@ -53,4 +55,5 @@ function trocarCor() {
       break
   }
 }
+
 getApiGithub()
