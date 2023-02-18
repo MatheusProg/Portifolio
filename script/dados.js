@@ -32,6 +32,5 @@ async function getApiGithub() {
     `
     projects.appendChild(gitCard)
   })
-  trocarCor()
 }
 getApiGithub()
