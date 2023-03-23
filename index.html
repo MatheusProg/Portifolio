@@ -4,111 +4,92 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./img/favicon-16x16.png"
-    />
-    <!-- ===== CSS ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="styled.css" />
     <title>Meu Portifolio</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
 
   <body>
     <header>
       <div class="container">
-          <img src="./img/MDias.svg" alt="logo" />
-          <nav>
-            <ul>
-              <li class="active">HOME</li>
-              <li>PROJETOS</li>
-              <li>CONTATOS</li>
-              <li>SOBRE ME</li>
-            </ul>
-          </nav>
-          <button>GITHUB</button>
-        </div>
+        <img src="./img/MDias.svg" alt="logo" />
+        <nav>
+          <ul>
+            <li class="active">HOME</li>
+            <li>PROJETOS</li>
+            <li>CONTATOS</li>
+            <li>SOBRE ME</li>
+          </ul>
+        </nav>
+        <button>GITHUB</button>
       </div>
     </header>
-    <div class="container1">
-      <aside>
-        <div class="profile borderShadow">
-          <div class="avatar"></div>
-          <h2 class="name">Matheus Dias Moreira</h2>
-          <h4 class="profisao">Front-end Developer</h4>
-        </div>
-        <div class="links borderShadow">
-          <a href="https://goo.gl/maps/s4299gCtymJB7wUH7"
-            ><img src="./img/map-pin.svg" alt="map-pin" />Salvador/BA</a
-          >
-          <a href="#"><img src="./img/briefcase.svg" alt="" />Estácil</a>
-          <a href="https://github.com/MatheusProg"
-            ><img src="./img/github.svg" alt="" />MatheusProg</a
-          >
-          <a href="#"><img src="./img/linkedin.svg" alt="" />Matheus Dias</a>
-          <a href="#"
-            ><img src="./img/globe.svg" alt="" /> https://matheusdias.dev</a
-          >
-          <a href="#"
-            ><img src="./img/mail.svg" alt="" />matheus-dias1@outlook.com</a
-          >
-        </div>
-        <div class="tecnologies borderShadow">
-          <h3>Tecnologias</h3>
-          <ul>
-            <li>JAVASCRIPT</li>
-            <li>REACTJS</li>
-            <li>NODEJS</li>
-            <li>GIT</li>
-            <li>GITHUB</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-      </aside>
-      <main>
-        <div class="project">
-          <div class="p barra borderShadow">
-            <h3>Meus Projetos</h3>
-            <a href="#">Veja todos</a>
+    <main>
+      <div class="apresentation">
+        <div class="container">
+          <div class="profile">
+            <div class="avatar"></div>
+            <h3>Matheus Dias Moreira</h3>
+            <h4>Front-End Developer</h4>
+            <div class="tech-profile">
+              <img src="./img/html.svg" alt="html icon" />
+              <img src="./img/css.svg" alt="css icon" />
+              <img src="./img/javascript.svg" alt="javascript icon" />
+              <img src="./img/reactjs.svg" alt="reactjs icon" />
+            </div>
           </div>
-          <div id="cardContainer"></div>
-        </div>
-        <div id="postContainer">
-          <div class="barra borderShadow">
-            <h3>Post Recentes</h3>
-          </div>
-          <div class="post">
-            <div class="cardPost borderShadow">
-              <div class="postAvatar"></div>
-              <div class="postContent">
-                <h4>
-                  Tenho 2 cards na minha aplicação e a função só reconhece e...
-                </h4>
-                <span>1 min atrás</span>
-                <h5>
-                  Minha função só reconhece/retorna o 1 elemento e aplica a
-                  condição. Queria saber como selecionar e retornar todos o
-                  elementos? em JavaScript Puro!
-                </h5>
-                <div class="tags">
-                  <span>#javascript</span> <span>#elementos</span>
+          <div class="project">
+            <h1>Projetos</h1>
+            <div class="card-container">
+              <div class="card borderShadow2">
+                <h4><i class="ph-bold ph-folder-simple"></i>nome do projeto</h4>
+                <p class="description">
+                  Esse portifolho Está em desenvolvimento para mostrar/ praticar
+                  minhas...
+                </p>
+                <div class="dados">
+                  <div class="count star">
+                    <i class="ph-bold ph-star"></i>
+                    <span class="countStar">0</span>
+                  </div>
+                  <div class="count view">
+                    <i class="ph-bold ph-eye"></i>
+                    <span class="countView">0</span>
+                  </div>
+                  <div class="techs">
+                    <span class="cor"></span>
+                    <span class="tech">Javascript</span>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="card borderShadow2">
+                <h4><i class="ph-bold ph-folder-simple"></i>nome do projeto</h4>
+                <p class="description">
+                  Esse portifolho Está em desenvolvimento para mostrar/ praticar
+                  minhas...
+                </p>
+                <div class="dados">
+                  <div class="count star">
+                    <i class="ph-bold ph-star"></i>
+                    <span class="countStar">0</span>
+                  </div>
+                  <div class="count view">
+                    <i class="ph-bold ph-eye"></i>
+                    <span class="countView">0</span>
+                  </div>
+                  <div class="techs">
+                    <span class="cor"></span>
+                    <span class="tech">Javascript</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
+
     <footer></footer>
-    <script src="./script/dados.js"></script>
   </body>
 </html>
