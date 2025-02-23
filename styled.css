@@ -52,10 +52,11 @@ header .container {
     justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-left: 1rem;
 }
-
+/* ------------navBar area---------------------- */
 nav{
-    display: none;
+    display: flex;
     gap: 4.8rem;
     align-items: center;
     justify-content: space-between;
@@ -73,10 +74,10 @@ nav ul li {
     font-size: 2rem
 }
 .active {
-    border-bottom: 4px solid var(--bg-techs);
+    border-bottom: 4px solid var(--body-bg-color);
 }
 
-header button{
+header .github{
     width: 12rem;
     height: 4rem;
     background: var(--button);
@@ -85,6 +86,10 @@ header button{
     color: var(--defaut-light-color);
     border: none;
     border-radius: 1.5rem;
+}
+
+ .mobile-menu-icon {
+    display: none;
 }
 /* ----- Main Area ----- */
 
@@ -249,3 +254,25 @@ main {
 /* -----  ----- */
 /* -----  ----- */
 /* -----  ----- */
+@media screen and ( max-width: 1026px)  {
+    header .container .github{
+        display: none;
+    }
+    
+    nav {
+        display: none;
+    }
+
+    .mobile-menu-icon{
+        display: flex;
+        padding-top: 1rem;
+    }
+
+    .mobile-menu-icon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    
+    
+}
